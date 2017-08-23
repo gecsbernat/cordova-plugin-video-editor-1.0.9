@@ -414,13 +414,15 @@ public class VideoEditor extends CordovaPlugin {
                         return;
                     }
 
-                    callback.success(outputFilePath);
+                    //callback.success(outputFilePath);
                 } catch (Throwable e) {
                     Log.d(TAG, "transcode exception ", e);
                     callback.error(e.toString());
                 }
             }
         });
+
+        callback.success(outputFilePath);
 
     }
 
